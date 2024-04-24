@@ -20,9 +20,9 @@ st.markdown("""
 """, unsafe_allow_html=True)
 st.markdown("""
 Made with ❤️ by [Soumya](https://github.com/imsoumya18)\n
-Star ⭐ this repo on [GitHub](https://github.com/imsoumya18/E-commerce_FAQ)
+Star ⭐ this repo on [GitHub](https://github.com/imsoumya18/chatPDF)
 """, unsafe_allow_html=True)
-st.title("E-commerce FAQ 🛒")
+st.title("Chat with PDF 💬")
 
 # Sidebar contents
 with st.sidebar:
