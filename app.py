@@ -42,8 +42,6 @@ load_dotenv()
 
 
 def main():
-    st.header("Chat with PDF")
-
     # upload a PDF file
     pdf = st.file_uploader("Choose a PDF", type="pdf")
 
