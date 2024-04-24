@@ -9,6 +9,21 @@ from langchain.chains.question_answering import load_qa_chain
 from dotenv import load_dotenv
 import os
 
+# Heading
+st.markdown("""
+<style>
+    #MainMenu
+    {
+        visibility: hidden;
+    }
+</style>
+""", unsafe_allow_html=True)
+st.markdown("""
+Made with ❤️ by [Soumya](https://github.com/imsoumya18)\n
+Star ⭐ this repo on [GitHub](https://github.com/imsoumya18/E-commerce_FAQ)
+""", unsafe_allow_html=True)
+st.title("E-commerce FAQ 🛒")
+
 # Sidebar contents
 with st.sidebar:
     st.title('🤗💬 LLM Chat App')
