@@ -26,7 +26,7 @@ st.title("Chat with PDF 💬")
 
 # Sidebar contents
 with st.sidebar:
-    st.title('🤗💬 LLM Chat App')
+    st.title('🤗💬 PDF Chat App')
     st.markdown('''
     ## About
     This app is an LLM-powered chatbot built using:
