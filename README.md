@@ -22,6 +22,7 @@ This project leverages several powerful technologies to deliver an intelligent a
 <img src="https://github.com/imsoumya18/imsoumya18/blob/main/assets/streamlit.png"  alt="Streamlit"  height="42px">
 
 Upload PDF and ask questions from that PDF.
+![Demo](assets/Recording.gif)
 
 Any type of feedback is appreciated: soumyadeep184@gmail.com  
   
