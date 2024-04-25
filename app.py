@@ -24,7 +24,7 @@ Star ⭐ this repo on [GitHub](https://github.com/imsoumya18/chatPDF)
 """, unsafe_allow_html=True)
 st.title("Chat with PDF 💬")
 
-# Sidebar contents
+# Sidebar
 with st.sidebar:
     st.title('🤗💬 PDF Chat App')
     st.markdown('''
@@ -48,17 +48,20 @@ def main():
     if pdf is not None:
         pdf_reader = PdfReader(pdf)
 
+        # Extract text
         text = ""
 
         for page in pdf_reader.pages:
             text += page.extract_text()
 
+        # Split the text
         text_splitter = RecursiveCharacterTextSplitter(
             chunk_size=1000,
             chunk_overlap=200,
             length_function=len
         )
 
+        # Embedding
         chunks = text_splitter.split_text(text)
         store_name = pdf.name[:-4]
         embeddings = OpenAIEmbeddings()
@@ -66,13 +69,14 @@ def main():
         if not os.path.exists(f"vectorDB/{store_name}"):
             vectordb = FAISS.from_texts(chunks, embeddings)
             vectordb.save_local(f"vectorDB/{store_name}")
-            st.write("Saved successfully")
+            # st.write("Saved successfully")
 
         vectordb = FAISS.load_local(f"vectorDB/{store_name}", embeddings, allow_dangerous_deserialization=True)
-        st.write("Loaded successfully")
+        # st.write("Loaded successfully")
 
         query = st.text_input("Ask questions about the PDF file: ")
 
+        # Searching the query for answers in chunks
         if query:
             docs = vectordb.similarity_search(query, k=3)
 
