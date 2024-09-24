@@ -3,8 +3,8 @@ from streamlit_extras.add_vertical_space import add_vertical_space
 from PyPDF2 import PdfReader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.embeddings.openai import OpenAIEmbeddings
-from langchain.vectorstores import FAISS
-from langchain.llms import OpenAI
+from langchain_community.vectorstores import FAISS
+from langchain_community.llms import OpenAI
 from langchain.chains.question_answering import load_qa_chain
 from dotenv import load_dotenv
 import os
@@ -32,6 +32,7 @@ with st.sidebar:
     This app is an LLM-powered chatbot built using:
     - [Streamlit](https://streamlit.io/)
     - [LangChain](https://python.langchain.com/)
+    - [FAISS](https://ai.meta.com/tools/faiss/)
     - [OpenAI](https://platform.openai.com/docs/models) LLM model
 
     ''')
